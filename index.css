@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --accent: 16 185 129;
+}
+
+.tail-container {
+    font-family: 'Inter', system_ui, sans-serif;
+}
+
+.heading-font {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.nav-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+    color: rgb(16 185 129);
+    transform: translateY(-1px);
+}
+
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.skill-badge {
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background-color: rgb(16 185 129 / 0.1);
+    transform: scale(1.05);
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: rgb(16 185 129);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.modal {
+    animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.section-header {
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, rgb(16 185 129), rgb(52 211 153));
+    border-radius: 9999px;
+}
+
+/* Modal Scroll Fix */
+#project-modal .modal {
+    max-height: 90vh;
+    overflow-y: auto;
+}
