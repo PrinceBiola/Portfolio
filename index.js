@@ -64,6 +64,18 @@ const projects = [
         github: "https://github.com/PrinceBiola/FlowSpace",
         codeSnippet: `// AI Flowchart Generation\nasync function generateFlowchart(prompt) {\n  const response = await ai.generate(prompt);\n  renderDiagram(response);\n}`,
         impact: "Zero-latency collaboration with integrated AI brainstorming"
+    },
+    {
+        id: 3,
+        title: "QuickBite",
+        category: "Full-Stack Dining & Admin",
+        image: "./assets/QuickBite.png",
+        description: "A premium digital dining experience bridging traditional wood-fire cooking with modern admin efficiency. Features a curated menu of Nigerian classics like Jollof, Suya, and Egusi with real-time order tracking.",
+        tech: ["React", "Vite", "Tailwind CSS v4", "Framer Motion", "Context API"],
+        live: "https://quick-bite-beige.vercel.app/",
+        github: "https://github.com/PrinceBiola/QuickBite",
+        codeSnippet: `// Admin Order Management Status Update\nconst updateOrderStatus = async (orderId, status) => {\n  const updated = await api.put(\`/orders/\${orderId}\`, { status });\n  setOrders(prev => prev.map(o => o.id === orderId ? updated : o));\n};`,
+        impact: "Integrated culinary excellence with real-time business analytics and professional management suite."
     }
 ];
 
