@@ -76,6 +76,18 @@ const projects = [
         github: "https://github.com/PrinceBiola/QuickBite",
         codeSnippet: `// Admin Order Management Status Update\nconst updateOrderStatus = async (orderId, status) => {\n  const updated = await api.put(\`/orders/\${orderId}\`, { status });\n  setOrders(prev => prev.map(o => o.id === orderId ? updated : o));\n};`,
         impact: "Integrated culinary excellence with real-time business analytics and professional management suite."
+    },
+    {
+        id: 4,
+        title: "Bramble",
+        category: "CLI Security & Productivity",
+        image: "./assets/Bramble.png",
+        description: "A Python-based CLI tool designed for developers who live in the terminal. It’s more than just a note-taker—it’s a 'protected garden' for your thoughts and an 'unbreakable vault' for your secrets, featuring zero-knowledge AES-256 encryption.",
+        tech: ["Python", "Typer", "Rich", "Cryptography", "AES-256"],
+        live: "https://github.com/PrinceBiola/Bramble",
+        github: "https://github.com/PrinceBiola/Bramble",
+        codeSnippet: `def derive_key(password: str, salt: bytes) -> bytes:\n    kdf = PBKDF2HMAC(\n        algorithm=hashes.SHA256(),\n        length=32,\n        salt=salt,\n        iterations=480_000,\n    )\n    return kdf.derive(password.encode())`,
+        impact: "Secured developer secrets with zero-knowledge implementation and seamless terminal DX."
     }
 ];
 
